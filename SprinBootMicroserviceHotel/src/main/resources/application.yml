@@ -1,0 +1,24 @@
+server:
+  port: 8812
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Awash
+    username: tc
+    password: tc
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: HOTEL-SERVICE  
+       
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registry-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    

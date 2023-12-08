@@ -1,0 +1,22 @@
+server:
+  port: 8811
+  
+spring:
+  datasource:
+    url: jdbc:db2://localhost:50000/ADMINDB
+    username: bfdbusr
+    password: db2@dm1n
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+       
+eureka:
+  instance:
+    hostname: localhost 
+    prefer-ip-address: true
+  client:
+    registry-with-eureka: false
+    fetch-registry: false
